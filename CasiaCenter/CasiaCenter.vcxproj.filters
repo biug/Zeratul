@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\rapidjson">
+      <UniqueIdentifier>{d1e807ae-8be3-46c0-956e-6cdc23193b30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\gflags">
+      <UniqueIdentifier>{b9e86770-5eff-444d-a7e0-770a15403995}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="run.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BotAssert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="JSONTools.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\gflags\gflags.cc">
+      <Filter>源文件\gflags</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\gflags\gflags_completions.cc">
+      <Filter>源文件\gflags</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\gflags\gflags_reporting.cc">
+      <Filter>源文件\gflags</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\gflags\windows_port.cc">
+      <Filter>源文件\gflags</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BotAssert.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="JSONTools.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\allocators.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\document.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\encodedstream.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\encodings.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\filereadstream.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\filewritestream.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\memorybuffer.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\memorystream.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\pointer.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\prettywriter.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\rapidjson.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\reader.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\stringbuffer.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\writer.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\msinttypes\inttypes.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\msinttypes\stdint.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\internal\biginteger.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\internal\diyfp.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\internal\dtoa.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\internal\ieee754.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\internal\itoa.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\internal\meta.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\internal\pow10.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\internal\stack.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\internal\strfunc.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\internal\strtod.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\error\en.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rapidjson\error\error.h">
+      <Filter>源文件\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gflags\config.h">
+      <Filter>源文件\gflags</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gflags\defines.h">
+      <Filter>源文件\gflags</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gflags\gflags.h">
+      <Filter>源文件\gflags</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gflags\gflags_completions.h">
+      <Filter>源文件\gflags</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gflags\gflags_declare.h">
+      <Filter>源文件\gflags</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gflags\gflags_gflags.h">
+      <Filter>源文件\gflags</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gflags\mutex.h">
+      <Filter>源文件\gflags</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gflags\util.h">
+      <Filter>源文件\gflags</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gflags\windows_port.h">
+      <Filter>源文件\gflags</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
