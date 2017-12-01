@@ -55,7 +55,7 @@ public:
     int BuildingSpacing;
     int PylonSpacing;
  
-    BotConfig();
+    BotConfig(const std::string & configpath);
 
     void readConfigFile();
 };

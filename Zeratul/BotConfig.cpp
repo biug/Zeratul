@@ -3,11 +3,11 @@
 #include "JSONTools.h"
 #include <iostream>
 
-BotConfig::BotConfig()
+BotConfig::BotConfig(const std::string & configpath)
 {
     ConfigFileFound                     = true;
     ConfigFileParsed                    = true;
-    ConfigFileLocation                  = "BotConfig.txt";
+    ConfigFileLocation                  = configpath;
     BotName                             = "Zeratul";
     Authors                             = "CasiaX";
     PrintInfoOnStart                    = false;

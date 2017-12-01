@@ -19,7 +19,7 @@ BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserve
 	return TRUE;
 }
 
-extern "C" ZERATUL_API sc2::Agent* newAIModule()
+extern "C" ZERATUL_API sc2::ConfigAgent* newAIModule(const std::string & configFile)
 {
-	return new Zeratul();
+	return new Zeratul(configFile);
 }

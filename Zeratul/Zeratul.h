@@ -14,7 +14,7 @@
 #include "BuildType.h"
 #include "StateManager.h"
 
-class Zeratul : public sc2::Agent 
+class Zeratul : public sc2::ConfigAgent 
 {
     sc2::Race               m_playerRace[2];
 
@@ -34,7 +34,7 @@ class Zeratul : public sc2::Agent
 
 public:
 
-    Zeratul();
+    Zeratul(const std::string & configFile);
     void OnGameStart() override;
     void OnStep() override;
 	void OnUpgradeCompleted(sc2::UpgradeID upgradeID) override;

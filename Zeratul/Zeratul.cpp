@@ -3,7 +3,7 @@
 #include "Zeratul.h"
 #include "Util.h"
 
-Zeratul::Zeratul()
+Zeratul::Zeratul(const std::string & configFile)
     : m_map(*this)
     , m_bases(*this)
     , m_unitInfo(*this)
@@ -12,6 +12,8 @@ Zeratul::Zeratul()
     , m_strategy(*this)
     , m_techTree(*this)
 	, m_state(*this)
+	, m_config(configFile)
+	, ConfigAgent(configFile)
 {
     
 }

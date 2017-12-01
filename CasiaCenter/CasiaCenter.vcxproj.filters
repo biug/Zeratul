@@ -21,9 +21,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="run.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="BotAssert.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -41,6 +38,15 @@
     </ClCompile>
     <ClCompile Include="..\include\gflags\windows_port.cc">
       <Filter>源文件\gflags</Filter>
+    </ClCompile>
+    <ClCompile Include="fight.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="match.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="run.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +166,12 @@
     </ClInclude>
     <ClInclude Include="..\include\gflags\windows_port.h">
       <Filter>源文件\gflags</Filter>
+    </ClInclude>
+    <ClInclude Include="fight.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="match.h">
+      <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
