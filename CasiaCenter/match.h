@@ -12,7 +12,7 @@ extern "C" {
 	* Method:    match
 	* Signature: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 	*/
-	JNIEXPORT jint JNICALL Java_ladder_service_MatchService_match
+	JNIEXPORT jint JNICALL Java_match_service_MatchService_match
 	(JNIEnv *, jobject, jstring, jstring, jstring, jstring, jstring, jstring, jstring, jstring, jstring);
 
 #ifdef __cplusplus

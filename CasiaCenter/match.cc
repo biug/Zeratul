@@ -3,7 +3,7 @@
 #include "fight.h"
 #include <string.h>
 
-JNIEXPORT jint JNICALL Java_ladder_service_MatchService_match
+JNIEXPORT jint JNICALL Java_match_service_MatchService_match
 (JNIEnv *env, jobject object, jstring sc2_path,
 	jstring bot1_path, jstring bot1_config, jstring bot1_race,
 	jstring bot2_path, jstring bot2_config, jstring bot2_race,
