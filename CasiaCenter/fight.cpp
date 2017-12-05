@@ -65,7 +65,7 @@ int fight(char *sc2_path,
 {
 	int argc = 3;
 	char* argv[3];
-	argv[0] = "CommandCenter";
+	argv[0] = "CasiaCenter";
 	argv[1] = "-e";
 	argv[2] = sc2_path;
 	sc2::Coordinator coordinator;

@@ -52,7 +52,7 @@ void MarineManager::assignTargets(const std::vector<const sc2::Unit *> & targets
 		int currentHP = marine->health;
 		bool beingAttack = currentHP < marineInfos[marine].m_hpLastSecond;
 		if (refreshInfo) marineInfos[marine].m_hpLastSecond = currentHP;
-
+		
 		// if the order is to attack or defend
 		if (order.getType() == SquadOrderTypes::Attack || order.getType() == SquadOrderTypes::Defend)
 		{
@@ -80,14 +80,14 @@ void MarineManager::assignTargets(const std::vector<const sc2::Unit *> & targets
 							stimpack = false;
 						}
 					}
-					if (stimpack && beingAttack)
+					if (stimpack && (beingAttack || marine->weapon_cooldown >0))
 					{
 						Micro::SmartAbility(marine, sc2::ABILITY_ID::EFFECT_STIM,m_bot);
 					}
 					continue;
 				}
 				// kite attack it
-				Micro::SmartKiteTarget(marine, target, m_bot);
+				Micro::SmartAttackMove(marine, target->pos, m_bot);
 			}
 			// if there are no targets
 			else
@@ -142,7 +142,8 @@ const sc2::Unit * MarineManager::getTarget(const sc2::Unit * rangedUnit, const s
 int MarineManager::getAttackPriority(const sc2::Unit * attacker, const sc2::Unit * unit)
 {
 	BOT_ASSERT(unit, "null unit in getAttackPriority");
-	if (unit->unit_type.ToType() == sc2::UNIT_TYPEID::PROTOSS_SENTRY) {
+	if (Util::IsPsionicUnit(unit))
+	{
 		return 11;
 	}
 	if (Util::IsCombatUnit(unit, m_bot))

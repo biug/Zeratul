@@ -16,6 +16,8 @@ namespace Util
     };
 
     int GetPlayer(const sc2::Unit * unit);
+	bool IsPsionicUnit(const sc2::Unit * unit);
+	bool hasReactor(const sc2::Unit * unit, Zeratul &bot);
     bool IsCombatUnit(const sc2::Unit * unit, Zeratul & bot);
     bool IsCombatUnitType(const sc2::UnitTypeID & type, Zeratul & bot);
     bool IsSupplyProvider(const sc2::Unit * unit);

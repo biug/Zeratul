@@ -24,13 +24,22 @@ DEFINE_string(race2, "Protoss", "race2");
 DEFINE_string(computer_race, "Terran", "computer race");
 DEFINE_int32(computer_difficulty, 5, "Hard");
 DEFINE_int32(step_size, 1, "step size");
+DEFINE_string(game_path, "E:\\StarCraft II\\Versions\\Base59587\\SC2_x64.exe", "game path");
 
 int main(int argc, char* argv[])
 {
 	google::ParseCommandLineFlags(&argc, &argv, true);
 
+	char *s_GamePath = new char(FLAGS_game_path.size() + 1);
+	strcpy(s_GamePath, FLAGS_game_path.c_str());
+
+	char *coorArgs[3];
+	coorArgs[0] = argv[0];
+	coorArgs[1] = "-e";
+	coorArgs[2] = s_GamePath;
+
 	sc2::Coordinator coordinator;
-	if (!coordinator.LoadSettings(argc, argv))
+	if (!coordinator.LoadSettings(3, coorArgs))
 	{
 		std::cout << "Unable to find or parse settings." << std::endl;
 		return 1;
@@ -46,10 +55,10 @@ int main(int argc, char* argv[])
 
 	if (FLAGS_mode == "PvP")
 	{
-		fight("E:\\StarCraft II\\Versions\\Base58400\\SC2_x64.exe",
+		fight(s_GamePath,
 			FLAGS_bot1, FLAGS_config1, FLAGS_race1,
 			FLAGS_bot2, FLAGS_config2, FLAGS_race2,
-			"D:\\scbots\\maps\\Ladder2017Season3\\AbyssalReefLE.SC2Map", "E:\\StarCraft II\\Temp");
+			FLAGS_map, "E:\\StarCraft II\\Temp");
 	}
 	else if (FLAGS_mode == "PvC")
 	{
@@ -82,6 +91,10 @@ int main(int argc, char* argv[])
 	if (bot2)
 	{
 		delete bot2;
+	}
+	if (s_GamePath)
+	{
+		delete s_GamePath;
 	}
 
 	return 0;
